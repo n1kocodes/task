@@ -36,6 +36,7 @@ body {
 	right: 0;
 	margin-left: auto;
 	margin-right: auto;
+	min-height: 250px;
 }
 .bg-blue {
 	background: #3399FF;
@@ -90,6 +91,7 @@ body {
 	text-transform: uppercase;
 }
 
+/*--------------------*/
 @media (max-width: 1170px) {
 	.container {
 		max-width: 100%;
@@ -133,3 +135,4 @@ body {
 		text-align: right;
 	}	
 }
+/*--------------------*/
