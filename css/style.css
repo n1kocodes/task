@@ -40,30 +40,29 @@ body {
 .bg-blue {
 	background: #3399FF;
 	flex: 1 1 66.666%;
-	/*width: 100%;
-	height: 100%;*/
 }
 .bg-pink {
 	background: #FF5FF8;
 	flex: 1 1 33.333%;
-	/*width: 100%;
-	height: 100%;*/
 }
 .container {
 	max-width: 1170px;
 	margin: 0px auto;
+	height: 100%;
 }
 .wrapper {
-	padding: 25px 0 0 0;
+	padding: 25px 0 25px;
 	position: absolute;
 	left: 0;
 	right: 0;
 	width: 100%;
+	height: 100%;
 }
 .wrapper__row {
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
+	height: 100%;
 }
 .wrapper__col {
 	padding: 0 10px;
@@ -79,14 +78,12 @@ body {
 	padding: 25px;
 	border: 1px #fff solid;
 	flex: 1 1 66.666%;
-	/*height: 500px;*/
 	height: 100%;
 }
 .wrapper__right {
 	padding: 25px;
 	border: 1px #fff solid;
 	flex: 1 1 33.333%;
-	/*height: 500px;*/
 	height: 100%;
 }
 .wrapper__list {
@@ -102,23 +99,37 @@ body {
 	.container {
 		max-width: none;
 	}
-	.wrapper__col {
-		flex: 1 1 100%;
+
+	html, .background, .wrapper, .wrapper__row {
+		min-width: 250px;
+	}
+
+	body {
+		flex-direction: column;
+		flex-wrap: nowrap;
+		background: #fff;
+	}
+	.background {
+		min-height: 434px;
 	}
 	.bg-blue {
 		background: #3399FF;
 		flex: 1 1 100%;
-		/*width: 100%;
-		height: 100%;*/
 	}
 	.bg-pink {
 		background: #FF5FF8;
 		flex: 1 1 100%;
-		/*width: 100%;
-		height: 100%;*/
 	}
-	body {
-		flex-direction: column;
-		flex-wrap: nowrap;
+	.wrapper {
+		padding: 10px 0 10px;
 	}
+	.wrapper__col {
+		flex: 1 1 100%;
+	}
+	.wrapper__col-left {
+		padding: 0 10px 10px;
+	}
+	.wrapper__right {
+		text-align: right;
+	}	
 }
